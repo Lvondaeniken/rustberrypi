@@ -2,7 +2,7 @@
 .PHONY: .build deploy
 
 .build: 
-	cargo build --target=armv7-unknown-linux-gnueabihf --release
+	cargo build
 
 deploy: .build
 	scp ./target/armv7-unknown-linux-gnueabihf/release/test-pi vonl@192.168.1.180:/home/vonl/Documents/
